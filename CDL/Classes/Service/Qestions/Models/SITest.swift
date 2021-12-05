@@ -22,6 +22,7 @@ struct SIQuestion {
     let answers: [SIAnswer]
     let multiple: Bool
     let explanation: String?
+    let media: [URL]
 }
 
 struct SIAnswer {

@@ -60,6 +60,8 @@ private extension GetSavedAndIncorrectResponseMapper {
             let video = (restJSON["video"] as? String)?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             
             let questionHtml = restJSON["question_html"] as? String ?? ""
+            let media = restJSON["explanation_media"] as? [String] ?? []
+            let mediaURLs = media.compactMap { URL(string: $0)}
             
             return SIQuestion(
                 id: id,
@@ -69,7 +71,8 @@ private extension GetSavedAndIncorrectResponseMapper {
                 questionHtml: questionHtml,
                 answers: answers,
                 multiple: multiple,
-                explanation: explanation
+                explanation: explanation,
+                media: mediaURLs
             )
         }
     }

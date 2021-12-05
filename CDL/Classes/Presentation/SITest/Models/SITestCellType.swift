@@ -11,5 +11,7 @@ enum SITestCellType {
     case content([QuestionContentType])
     case question(String, html: String)
     case answer(SIAnswerElement)
-    case explanation(String)
+    case explanationTitle
+    case explanationText(String)
+    case explanationImage(URL)
 }

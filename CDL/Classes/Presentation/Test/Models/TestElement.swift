@@ -28,5 +28,6 @@ struct QuestionElement {
     let isAnswered: Bool
     let questionsCount: Int
     let explanation: String?
+    let media: [URL]
     let isResult: Bool
 }
