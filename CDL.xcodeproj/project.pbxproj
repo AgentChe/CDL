@@ -30,6 +30,9 @@
 		86935FBE2674F542009D1D99 /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86935FBD2674F542009D1D99 /* FlashCardModel.swift */; };
 		86935FC026754F5E009D1D99 /* FlashCardManagerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86935FBF26754F5D009D1D99 /* FlashCardManagerMediator.swift */; };
 		86935FC226754FDF009D1D99 /* FlashCardManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86935FC126754FDF009D1D99 /* FlashCardManagerDelegate.swift */; };
+		86AB1BFE275CBC51006BE6B5 /* ExplanationTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB1BFD275CBC51006BE6B5 /* ExplanationTitleCell.swift */; };
+		86AB1C00275CBCFD006BE6B5 /* ExplanationTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB1BFF275CBCFD006BE6B5 /* ExplanationTextCell.swift */; };
+		86AB1C02275CBDDE006BE6B5 /* ExplanationImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB1C01275CBDDE006BE6B5 /* ExplanationImageCell.swift */; };
 		86ACACDF262595430020C51C /* CourseCellProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ACACDE262595430020C51C /* CourseCellProgressView.swift */; };
 		86ACACE42625AFA40020C51C /* SCCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ACACE32625AFA40020C51C /* SCCoursesCell.swift */; };
 		86ACAD072625E2E30020C51C /* SCTrophyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ACAD062625E2E30020C51C /* SCTrophyCollectionCell.swift */; };
@@ -203,7 +206,6 @@
 		967AD527260FD0AF008E8175 /* QuestionContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD446260FD0AE008E8175 /* QuestionContentCell.swift */; };
 		967AD529260FD0AF008E8175 /* QuestionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD448260FD0AE008E8175 /* QuestionCollectionCell.swift */; };
 		967AD52A260FD0AF008E8175 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD449260FD0AE008E8175 /* QuestionCell.swift */; };
-		967AD52B260FD0AF008E8175 /* ExplanationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD44A260FD0AE008E8175 /* ExplanationCell.swift */; };
 		967AD52C260FD0AF008E8175 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD44B260FD0AE008E8175 /* AnswerCell.swift */; };
 		967AD52F260FD0AF008E8175 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD44F260FD0AE008E8175 /* TestViewModel.swift */; };
 		967AD530260FD0AF008E8175 /* TestBottomButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD451260FD0AE008E8175 /* TestBottomButtonState.swift */; };
@@ -396,6 +398,9 @@
 		86935FBD2674F542009D1D99 /* FlashCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
 		86935FBF26754F5D009D1D99 /* FlashCardManagerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardManagerMediator.swift; sourceTree = "<group>"; };
 		86935FC126754FDF009D1D99 /* FlashCardManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardManagerDelegate.swift; sourceTree = "<group>"; };
+		86AB1BFD275CBC51006BE6B5 /* ExplanationTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTitleCell.swift; sourceTree = "<group>"; };
+		86AB1BFF275CBCFD006BE6B5 /* ExplanationTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTextCell.swift; sourceTree = "<group>"; };
+		86AB1C01275CBDDE006BE6B5 /* ExplanationImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationImageCell.swift; sourceTree = "<group>"; };
 		86ACACDE262595430020C51C /* CourseCellProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellProgressView.swift; sourceTree = "<group>"; };
 		86ACACE32625AFA40020C51C /* SCCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCoursesCell.swift; sourceTree = "<group>"; };
 		86ACAD062625E2E30020C51C /* SCTrophyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCTrophyCollectionCell.swift; sourceTree = "<group>"; };
@@ -572,7 +577,6 @@
 		967AD446260FD0AE008E8175 /* QuestionContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionContentCell.swift; sourceTree = "<group>"; };
 		967AD448260FD0AE008E8175 /* QuestionCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionCell.swift; sourceTree = "<group>"; };
 		967AD449260FD0AE008E8175 /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		967AD44A260FD0AE008E8175 /* ExplanationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationCell.swift; sourceTree = "<group>"; };
 		967AD44B260FD0AE008E8175 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		967AD44F260FD0AE008E8175 /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		967AD451260FD0AE008E8175 /* TestBottomButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBottomButtonState.swift; sourceTree = "<group>"; };
@@ -1559,8 +1563,10 @@
 				967AD446260FD0AE008E8175 /* QuestionContentCell.swift */,
 				967AD448260FD0AE008E8175 /* QuestionCollectionCell.swift */,
 				967AD449260FD0AE008E8175 /* QuestionCell.swift */,
-				967AD44A260FD0AE008E8175 /* ExplanationCell.swift */,
 				967AD44B260FD0AE008E8175 /* AnswerCell.swift */,
+				86AB1BFD275CBC51006BE6B5 /* ExplanationTitleCell.swift */,
+				86AB1BFF275CBCFD006BE6B5 /* ExplanationTextCell.swift */,
+				86AB1C01275CBDDE006BE6B5 /* ExplanationImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2344,7 +2350,6 @@
 				967AD545260FD0AF008E8175 /* TestStatsResultCell.swift in Sources */,
 				967AD532260FD0AF008E8175 /* TestType.swift in Sources */,
 				967AD517260FD0AF008E8175 /* StudyViewController.swift in Sources */,
-				967AD52B260FD0AF008E8175 /* ExplanationCell.swift in Sources */,
 				9613EC8F2634AEFD00DAEB9A /* SettingsOpener.swift in Sources */,
 				96DC8E202681059D00FEC74B /* OModeCell.swift in Sources */,
 				967AD536260FD0AF008E8175 /* TestView.swift in Sources */,
@@ -2381,6 +2386,7 @@
 				86BB25A0261E246F00C6D2FA /* SITestViewController.swift in Sources */,
 				967AD4BB260FD0AE008E8175 /* UITapGestureRecognizerExtension.swift in Sources */,
 				967AD521260FD0AF008E8175 /* StudyView.swift in Sources */,
+				86AB1C02275CBDDE006BE6B5 /* ExplanationImageCell.swift in Sources */,
 				967AD4E3260FD0AE008E8175 /* TestStats.swift in Sources */,
 				96B67AEA2629BB100048DAB9 /* OSlideExperienceView.swift in Sources */,
 				967AD501260FD0AF008E8175 /* GetBriefResponseMapper.swift in Sources */,
@@ -2437,6 +2443,7 @@
 				96E360402672506300D49D4E /* FlashcardsViewController.swift in Sources */,
 				967AD4F5260FD0AF008E8175 /* QuestionManagerMediator.swift in Sources */,
 				967AD54E260FD0AF008E8175 /* TestStatsViewModel.swift in Sources */,
+				86AB1BFE275CBC51006BE6B5 /* ExplanationTitleCell.swift in Sources */,
 				967AD4EB260FD0AE008E8175 /* GetTestConfigResponseMapper.swift in Sources */,
 				967AD55E260FD0AF008E8175 /* CourseStatsElement.swift in Sources */,
 				969679DC265E36A70070E7F7 /* STLocaleCell.swift in Sources */,
@@ -2531,6 +2538,7 @@
 				9673818F26792DC000230FB6 /* MonetizationManager.swift in Sources */,
 				96F44FB62631788D000B77E3 /* TopicsCollectionElement.swift in Sources */,
 				967AD537260FD0AF008E8175 /* TestViewController.swift in Sources */,
+				86AB1C00275CBCFD006BE6B5 /* ExplanationTextCell.swift in Sources */,
 				86BB25B1261E2F8D00C6D2FA /* SIProgressCollectionView.swift in Sources */,
 				967AD4CC260FD0AE008E8175 /* PaddingPickerView.swift in Sources */,
 				967AD50D260FD0AF008E8175 /* STLinksCell.swift in Sources */,

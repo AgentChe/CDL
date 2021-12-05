@@ -113,8 +113,15 @@ extension SITestTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: SIAnswerCell.self), for: indexPath) as! SIAnswerCell
             cell.setup(element: answer)
             return cell
-        case let .explanation(explanation):
-            let cell = dequeueReusableCell(withIdentifier: String(describing: ExplanationCell.self), for: indexPath) as! ExplanationCell
+        case .explanationTitle:
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ExplanationTitleCell.self), for: indexPath) as! ExplanationTitleCell
+            return cell
+        case let .explanationImage(url):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ExplanationImageCell.self), for: indexPath) as! ExplanationImageCell
+            cell.confugure(image: url)
+            return cell
+        case let .explanationText(explanation):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ExplanationTextCell.self), for: indexPath) as! ExplanationTextCell
             cell.confugure(explanation: explanation)
             return cell
         }
@@ -127,7 +134,9 @@ private extension SITestTableView {
         register(QuestionContentCell.self, forCellReuseIdentifier: String(describing: QuestionContentCell.self))
         register(SIAnswerCell.self, forCellReuseIdentifier: String(describing: SIAnswerCell.self))
         register(SIQuestionCell.self, forCellReuseIdentifier: String(describing: SIQuestionCell.self))
-        register(ExplanationCell.self, forCellReuseIdentifier: String(describing: ExplanationCell.self))
+        register(ExplanationImageCell.self, forCellReuseIdentifier: String(describing: ExplanationImageCell.self))
+        register(ExplanationTextCell.self, forCellReuseIdentifier: String(describing: ExplanationTextCell.self))
+        register(ExplanationTitleCell.self, forCellReuseIdentifier: String(describing: ExplanationTitleCell.self))
         separatorStyle = .none
         
         dataSource = self

@@ -14,6 +14,7 @@ struct SIQuestionElement {
     let index: Int
     let questionsCount: Int
     let explanation: String?
+    let media: [URL]
     let isResult: Bool
 }
 

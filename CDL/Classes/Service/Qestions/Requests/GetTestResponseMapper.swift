@@ -64,6 +64,8 @@ private extension GetTestResponseMapper {
             let video = (restJSON["video"] as? String)?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             
             let questionHtml = restJSON["question_html"] as? String ?? ""
+            let media = restJSON["explanation_media"] as? [String] ?? []
+            let mediaURLs = media.compactMap { URL(string: $0)}
             
             return Question(
                 id: id,
@@ -74,6 +76,7 @@ private extension GetTestResponseMapper {
                 answers: answers,
                 multiple: multiple,
                 explanation: explanation,
+                media: mediaURLs,
                 isAnswered: isAnswered
             )
         }

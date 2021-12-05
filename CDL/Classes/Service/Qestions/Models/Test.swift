@@ -24,6 +24,7 @@ struct Question {
     let answers: [Answer]
     let multiple: Bool
     let explanation: String?
+    let media: [URL]
     let isAnswered: Bool
 }
 

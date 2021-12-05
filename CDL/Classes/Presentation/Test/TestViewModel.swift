@@ -379,6 +379,7 @@ private extension TestViewModel {
                     isAnswered: question.isAnswered,
                     questionsCount: questions.count,
                     explanation: question.explanation,
+                    media: question.media,
                     isResult: false
                 )
             }
@@ -437,9 +438,22 @@ private extension TestViewModel {
                 
                 self?.scoreRelay.accept(!isIncorrect)
                 
-                let explanation: [TestingCellType] = [.none, .fullComplect].contains(testMode)
-                    ? currentQuestion.explanation.map { [.explanation($0)] } ?? []
-                    : []
+                let explanation: [TestingCellType]
+                
+                if [.none, .fullComplect].contains(testMode) {
+                    let explanationText = currentQuestion.explanation
+                        .map { TestingCellType.explanationText($0) }
+                    let explanationImages = currentQuestion.media.map { TestingCellType.explanationImage($0)}
+                    
+                    if explanationText != nil || !explanationImages.isEmpty {
+                        explanation = [.explanationTitle] + explanationImages + [explanationText].compactMap { $0 }
+                    } else {
+                        explanation = []
+                    }
+                    
+                } else {
+                    explanation = []
+                }
                 
                 return QuestionElement(
                     id: currentQuestion.id,
@@ -449,6 +463,7 @@ private extension TestViewModel {
                     isAnswered: currentQuestion.isAnswered,
                     questionsCount: currentQuestion.questionsCount,
                     explanation: currentQuestion.explanation,
+                    media: currentQuestion.media,
                     isResult: true
                 )
             }

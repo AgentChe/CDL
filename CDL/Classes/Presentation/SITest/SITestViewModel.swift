@@ -242,6 +242,7 @@ private extension SITestViewModel {
                     index: index + 1,
                     questionsCount: questions.count,
                     explanation: question.explanation,
+                    media: question.media,
                     isResult: false
                 )
             }
@@ -272,9 +273,22 @@ private extension SITestViewModel {
                             return .answer(value)
                         }
                 
-                let explanation: [SITestCellType] = [.none, .fullComplect].contains(testMode)
-                    ? currentQuestion.explanation.map { [.explanation($0)] } ?? []
-                    : []
+                let explanation: [SITestCellType]
+                
+                if [.none, .fullComplect].contains(testMode) {
+                    let explanationText = currentQuestion.explanation
+                        .map { SITestCellType.explanationText($0) }
+                    let explanationImages = currentQuestion.media.map { SITestCellType.explanationImage($0)}
+                    
+                    if explanationText != nil || !explanationImages.isEmpty {
+                        explanation = [.explanationTitle] + explanationImages + [explanationText].compactMap { $0 }
+                    } else {
+                        explanation = []
+                    }
+                    
+                } else {
+                    explanation = []
+                }
                 
                 return SIQuestionElement(
                     id: currentQuestion.id,
@@ -283,6 +297,7 @@ private extension SITestViewModel {
                     index: currentQuestion.index,
                     questionsCount: currentQuestion.questionsCount,
                     explanation: currentQuestion.explanation,
+                    media: currentQuestion.media,
                     isResult: true
                 )
             }
