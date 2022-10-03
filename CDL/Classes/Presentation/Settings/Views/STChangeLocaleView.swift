@@ -69,9 +69,9 @@ private extension STChangeLocaleView {
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(contentViews.count),
                                         height: UIScreen.main.bounds.height)
         
-        rx.sentMessage(#selector(layoutSubviews))
+        scrollView.rx.sentMessage(#selector(layoutSubviews))
             .filter { [weak self] _ -> Bool in
-                guard let frame = self?.frame else {
+                guard let frame = self?.scrollView.frame else {
                     return false
                 }
                 
